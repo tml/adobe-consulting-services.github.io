@@ -17,9 +17,9 @@ initial-release: 2.1.0
 ## Purpose
 
 
-The Oak repository used by AEM 6, allows from fine tuning of search performance via the definition of [Oak Index definitions](https://jackrabbit.apache.org/oak/docs/query/lucene.html). The index definition nodes, usually stored under `/oak:index`, define the index and also store the index data (in a node structure invisible to the AEM tooling).
+The Oak repository used by AEM 6 allows fine tuning of search performance via the definition of [Oak Indexes](https://jackrabbit.apache.org/oak/docs/query/lucene.html). The index definition nodes, usually stored under `/oak:index`, define the index and also store the actual index data (in a node structure invisible to the AEM tooling).
 
-Ideally the Oak Index definitions used by an application could be stored with in the application's content package, however, it is possible (and even likely) that upon deployment the content packages index definition may wipe out the actual index data (again, invisible via AEM tooling) when updating the node, necessitating a reindex, which depending on the repository size and index configuration can be costly (and generally unneccessary).
+Ideally the Oak Index definitions used by an application could be stored with in the application's content package; however, it is possible (and even likely) that upon deployment the content packages index definition may wipe out the actual index data (again, invisible via AEM tooling) when updating the node, necessitating a reindex, which - depending on the repository size and index configuration - can be costly (and generally unneccessary).
 
 Ensure Oak Index is tooling that allows Oak Index Definitions (referred to in this document as Ensure Definitions) to be defined in a content package, and then safely translated to real Oak Indexes.
 
